@@ -48,7 +48,10 @@
 
 .home-meal .home-split__visual::before { right: auto; left: -7%; background: rgba($color-blue, 0.28); }
 .home-care-link {
-  background-image: linear-gradient(rgba($color-bg, 0.76), rgba(238, 246, 232, 0.84)), url("../images/bg-dementia-care.jpg");
+  background-image: linear-gradient(rgba($color-bg, 0.76), rgba(238, 246, 232, 0.84)), image-set(
+    url("../images/bg-dementia-care.webp") type("image/webp"),
+    url("../images/bg-dementia-care.jpg") type("image/jpeg")
+  );
   background-position: center;
   background-size: cover;
 }

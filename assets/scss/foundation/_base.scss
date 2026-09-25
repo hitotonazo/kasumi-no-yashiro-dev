@@ -8,7 +8,10 @@ body {
   overflow-x: hidden;
   color: $color-text;
   background-color: $color-bg;
-  background-image: url("../images/nuno.jpg");
+  background-image: image-set(
+    url("../images/nuno.webp") type("image/webp"),
+    url("../images/nuno.jpg") type("image/jpeg")
+  );
   background-position: center;
   background-size: 2000px auto;
   background-repeat: repeat;
