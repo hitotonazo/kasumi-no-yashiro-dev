@@ -1,0 +1,22 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 82px 78px;
+  color: #fff;
+  background-color: $color-green-dark;
+  background-image: linear-gradient(rgba($color-green-dark, 0.78), rgba($color-green, 0.72)), url("../images/bg-news-flowers.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.page-hero__label { margin-bottom: 12px; color: rgba(255, 255, 255, 0.84); font-size: 14px; font-weight: 700; letter-spacing: 0.18em; }
+.page-hero h1 { font-size: clamp(34px, 4vw, 52px); }
+.page-hero h1 + p { margin-top: 18px; color: rgba(255, 255, 255, 0.9); }
+
+@include sp {
+  .page-hero { padding-block: 54px 50px; }
+  .page-hero h1 { font-size: 32px; }
+}

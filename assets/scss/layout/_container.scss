@@ -1,0 +1,21 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.l-container {
+  width: 100%;
+  max-width: $content-width;
+  margin-inline: auto;
+  padding-inline: $gutter-pc;
+}
+
+.l-container--narrow {
+  max-width: $content-width-narrow;
+}
+
+@include sp {
+  .l-container,
+  .l-container--narrow {
+    max-width: none;
+    padding-inline: $gutter-sp;
+  }
+}

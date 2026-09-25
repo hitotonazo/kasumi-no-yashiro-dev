@@ -1,0 +1,21 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.site-footer { padding-block: 64px 30px; background: $color-bg-soft; border-top: 1px solid $color-border; }
+.site-footer__top { display: flex; align-items: flex-start; justify-content: space-between; gap: 48px; }
+.site-footer__logo { display: block; width: 190px; }
+.site-footer__nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 28px; }
+.site-footer__nav a { display: grid; align-items: center; min-height: 44px; font-family: $font-heading; font-size: 14px; }
+.site-footer__nav a:hover { color: $color-green-dark; }
+.site-footer__bottom { display: flex; justify-content: space-between; gap: 30px; margin-top: 48px; padding-top: 24px; border-top: 1px solid $color-border; color: $color-text-light; font-size: 14px; }
+.site-footer__fiction { text-align: right; }
+
+@include sp {
+  .site-footer { padding-block: 48px 24px; }
+  .site-footer__top { display: grid; gap: 30px; }
+  .site-footer__logo { width: 170px; }
+  .site-footer__nav ul { display: grid; grid-template-columns: 1fr 1fr; justify-content: start; gap: 0 22px; }
+  .site-footer__nav li { border-bottom: 1px solid $color-border; }
+  .site-footer__bottom { display: grid; gap: 14px; margin-top: 36px; }
+  .site-footer__fiction { text-align: left; }
+}

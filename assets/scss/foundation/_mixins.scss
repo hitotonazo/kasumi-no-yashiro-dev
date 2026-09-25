@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+@mixin sp {
+  @media (max-width: $breakpoint-sp) {
+    @content;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid rgba($color-green-dark, 0.35);
+  outline-offset: 3px;
+}

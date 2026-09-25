@@ -1,0 +1,26 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding-inline: 28px;
+  border: 1px solid $color-green-dark;
+  border-radius: 999px;
+  color: #fff;
+  background: $color-green-dark;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+.c-button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.c-button--secondary { color: $color-green-dark; background: #fff; }
+.c-text-link { display: inline-flex; align-items: center; min-height: 44px; color: $color-green-dark; text-decoration: underline; text-underline-offset: 4px; }
+.c-text-link::after { content: "→"; margin-left: 8px; transition: transform 0.2s ease; }
+.c-text-link:hover::after { transform: translateX(3px); }
+
+@include sp { .c-button { min-height: 48px; } }

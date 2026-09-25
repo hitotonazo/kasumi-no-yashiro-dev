@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+html { min-width: 320px; background: $color-bg; }
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  color: $color-text;
+  background-color: $color-bg;
+  background-image: url("../images/nuno.jpg");
+  background-position: center;
+  background-size: 2000px auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.is-menu-open { overflow: hidden; }
+
+h1, h2, h3 {
+  font-family: $font-heading;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+}
+
+:focus-visible { @include focus-ring; }
+
+.u-font-en { font-family: $font-en; }
+.u-pc-only { display: inline; }
+.u-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.u-section-lg { padding-block: $space-lg-pc; }
+.u-section-md { padding-block: $space-md-pc; }
+.u-section-sm { padding-block: $space-sm-pc; }
+
+.site-main { min-height: 32vh; }
+.site-main__placeholder { min-height: $space-sm-pc; }
+
+@include sp {
+  body { font-size: 15px; }
+  .u-pc-only { display: none; }
+  .u-section-lg { padding-block: $space-lg-sp; }
+  .u-section-md { padding-block: $space-md-sp; }
+  .u-section-sm { padding-block: $space-sm-sp; }
+  .site-main__placeholder { min-height: $space-sm-sp; }
+}
