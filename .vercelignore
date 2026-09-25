@@ -1,0 +1,7 @@
+docs/
+review/
+images/
+assets/scss/
+node_modules/
+.vscode/
+README.md
